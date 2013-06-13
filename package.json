@@ -1,0 +1,42 @@
+{
+  "name": "node-sstream",
+  "description": "String-to-stream adapters for Node v0.10+ streams",
+  "version": "0.1.0",
+  "author": "Mark McKenna <mark.denis.mckenna@gmail.com>",
+  "maintainers": [
+    "Mark McKenna <mark.denis.mckenna@gmail.com>"
+  ],
+  "contributors": [
+    "Mark McKenna <mark.denis.mckenna@gmail.com>"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "licenses": [
+    {
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "stream",
+    "string"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/markmckenna/node-sstream.git"
+  },
+
+  "main": "index",
+
+  "engines": {
+    "node": "*"
+  },
+
+  "scripts": {
+    "test": "mocha"
+  }
+}

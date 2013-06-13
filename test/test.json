@@ -1,0 +1,8 @@
+{
+	"name" : "test file",
+	"value" : 12345,
+	"array" : [ 1, 4, "7" ],
+	"subobject" : {
+		"name" : "duplicate name"
+	}
+}
