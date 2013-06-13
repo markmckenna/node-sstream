@@ -7,20 +7,21 @@ example
 =======
 
 loadstore.js
----------
+------------
 
 	var sstream = require('node-sstream');
 	var fs = require('fs');
 
-	function loadJson(file) {
+	function loadJson(file, done) {
 		var ifstream = fs.createReadStream(file);
 		var ss = new sstream.StreamToString();
 		ifstream.pipe(ss);
-		return JSON.parse(ss.data);
+		ss.on('finish', function() { done(JSON.parse(ss.data)); });
 	}
 
-	function storeJson(json, file) {
+	function storeJson(json, file, done) {
 		var ofstream = fs.createWriteStream(file);
 		var ss = new sstream.StringToStream(JSON.stringify(json));
 		ss.pipe(ofstream);
+		ofstream.on('finish', done);
 	}
